@@ -1,0 +1,131 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Long Push Calculator</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+body { font-family: Tahoma, Verdana; }
+input.btn {
+  color:black;
+  font: bold 75% 'tahoma',helvetica,sans-serif;
+  background-color:#ffd148;
+  border: 2px solid;
+  border-color: #c7c5c8;
+ }
+ 
+ input.btn2 {
+  color:black;
+  font: bold 95% 'tahoma',helvetica,sans-serif;
+  background-color:#ffd148;
+  border: 2px solid;
+  border-color: #c7c5c8;
+ 
+}
+</style>
+
+<script>
+<!-- 
+	let cm2;
+	let length;
+	let tinches2;
+	let cm;
+	let width;
+	let tinches;
+
+// clears field of default value
+
+function clear_field(field) {
+		if (field.value==field.defaultValue) {
+			field.value=''
+		}
+	}
+
+function lots(form) {
+
+	if(isNaN(form.distance.value)||isNaN(form.cf.value)){
+		alert("Please enter numbers only");
+		return false;
+	}
+
+	if((form.distance.value==0)||(form.cf.value==0)){
+		alert("Please enter valid values into the boxes");
+	}
+
+	form.sinches.value = 25 * ((form.distance.value - 150) / 50) * (form.cf.value / 300);
+
+}
+
+</script>
+</head>
+<font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">
+<body BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<FORM NAME="form">
+<TABLE align="center" BORDER=0 width="950" CELLPADDING=5>
+<TR>
+
+<!--ROW 1-->
+<TD  colspan="2" width=80% align="center">
+<B>Long Push Calculator</B>
+</TD>
+</TR>
+<TR>
+
+<TD>Distance Between Truck and Apartment (150ft included)</TD>
+
+<TD>
+<input type="text" size="5" name="distance" value="150" />
+</TD>
+
+</TR>
+
+<TR>
+<TD>Inventory Size (cf)
+</TD>
+<TD>
+<input type="text" name="cf" size="5" value="300" />
+</TD>
+</TR>
+<TR>
+<TD colspan="2" ALIGN="center" VALIGN="middle"  BGCOLOR="#B6D4D2">
+<INPUT TYPE="button" VALUE="Calculate" class="btn-primary" onClick="lots(this.form)">&nbsp;&nbsp;
+<INPUT TYPE="submit" VALUE="Reset" class="btn-secondary">
+<br />
+<hr style="background:#ffd148; border:0; height:5px" />
+<hr style="background:#ffd148; border:0; height:5px" />
+</TD>
+</TR>
+<TR>
+<td BGCOLOR="#B6D4D2" colspan="2" align="center">
+<b>Calculated Results</b>
+</td>
+</tr>
+
+<TR>
+<TD>
+Long Push Charge
+</TD>
+<TD>
+<INPUT TYPE="text" NAME="sinches" size="5" value="0" readonly>
+</TD>
+</TR>
+</TABLE>
+</CENTER> 
+</FORM>
+</td>
+</tr>
+</table>
+
+</center>
+<br>
+<br>
+<br />
+</TD>
+</TR>
+</TABLE>
+</body> 
+</html>
