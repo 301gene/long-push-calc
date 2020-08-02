@@ -1,0 +1,155 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Long Push Calculator</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+
+body { font-family: Tahoma, Verdana; }
+.row { padding: 0.25em 0 0.25em 0; }
+.description { text-align: left; }
+.controls {
+	background-color: #B857A0; 
+	border-style: double;
+	border-color: #1F77B8;
+	margin: 0.5em -15px;
+}
+.title { font-size: large ;}
+.nerd { margin-top: 8em; }
+.formula { width: 100%; }
+table { margin-top: 3em; }
+
+</style>
+
+<script>
+<!-- 
+
+// clears field of default value
+
+function clear_field(field) {
+		if (field.value==field.defaultValue) {
+			field.value=''
+		}
+	}
+
+function calc(form) {
+
+	if(isNaN(form.distance.value)||isNaN(form.cf.value)){
+		alert("Please enter numbers only");
+		return false;
+	}
+
+	if((form.distance.value==0)||(form.cf.value==0)){
+		alert("Please enter valid values into the boxes");
+	}
+		else if (form.distance.value <= 150) {
+			alert("150 feet of distance is already included");
+			return false;
+		}
+
+	form.lpush.value = "$" + (25 * ((form.distance.value - 150) / 50) * (form.cf.value / 300)).toFixed(2);
+
+}
+
+</script>
+</head>
+<font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">
+<body BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<form name="form">
+
+
+<div class="container" align="center">
+	<div class="logo"><img src="./header-logo-white-bg-block-round-fade.png"></div>
+	<div class="row"><b class="title">Long Push Calculator</b></div>
+	<div class="row">
+		<div class="col-md-8 col-xs-6 description">Distance Between Truck and Apartment (150ft included)</div>
+		<div class="col-md-4 col-xs-6"><input type="text" size="5" name="distance" value="150" /></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-xs-6 description">Inventory Size (cf)</div>
+		<div class="col-md-4 col-xs-6"><input type="text" name="cf" size="5" value="300" /></div>
+	</div>
+
+	<div class="row controls">
+		<div>
+			<input type="button" value="Calculate" class="btn-primary" onClick="calc(this.form)">
+			<input type="submit" value="Reset" class="btn-secondary">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-xs-6 description">Long Push Charge</div>
+		<div class="col-md-4 col-xs-6"><input type="text" name="lpush" size="10" value="0" readonly></div>
+	</div>
+
+	<div class="row">
+		<table>
+			<tr>
+				<th>Pace to feet chart:</th>
+			</tr>
+			<tr>
+				<td>20 pace</td>
+				<td>= 50 ft</td>
+			</tr>
+			<tr>
+				<td>30 pace</td>
+				<td>= 75 ft</td>
+			</tr>
+			<tr>
+				<td>40 pace</td>
+				<td>= 100 ft</td>
+			</tr>
+			<tr>
+				<td>50 pace</td>
+				<td>= 125 ft</td>
+			</tr>
+			<tr>
+				<td>60 pace</td>
+				<td>= 150 ft</td>
+			</tr>
+			<tr>
+				<td>70 pace</td>
+				<td>= 175 ft</td>
+			</tr>
+			<tr>
+				<td>80 pace</td>
+				<td> = 200 ft</td>
+			</tr>
+			<tr>
+				<td>90 pace</td>
+				<td>= 225 ft</td>
+			</tr>
+			<tr>
+				<td>100 pace</td>
+				<td>= 250 ft</td>
+			</tr>
+			<tr>
+				<td>200 pace</td>
+				<td>= 500 ft</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="row">
+		<b>1 pace ~2.5ft (one large step OR 2 normal steps)</b>
+	</div>
+
+	<div class="row">
+		<div class="nerd"><b class="title">For Nerds:</b></div>
+	</div>
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12"><img src="./formula.png" class="formula"></div>
+		</div>
+	</div>
+	
+</div>
+
+</body> 
+</html>
