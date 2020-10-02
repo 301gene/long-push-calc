@@ -51,7 +51,7 @@ function calc(form) {
 			return false;
 		}
 
-	form.lpush.value = "$" + (25 * ((form.distance.value - 150) / 50) * (form.cf.value / 300)).toFixed(2);
+	form.lpush.value = "$" + (25 * ((form.distance.value - 150) / 50) * (form.cf.value / 400)).toFixed(2);
 
 }
 
@@ -73,7 +73,7 @@ function calc(form) {
 
 	<div class="row">
 		<div class="col-md-8 col-xs-6 description">Inventory Size (cf)</div>
-		<div class="col-md-4 col-xs-6"><input type="text" name="cf" size="5" value="300" /></div>
+		<div class="col-md-4 col-xs-6"><input type="text" name="cf" size="5" value="400" /></div>
 	</div>
 
 	<div class="row controls">
